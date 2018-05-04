@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Fei Chang Mie Wei Waimami</title>
+</head>
+<body>
+ <!-- Site Header -->
+ <h1>Fei Chang Mie Wei</h1>
+
+<!-- Blog Post -->
+ <h2>it is pretty health</h2>
+ <p>here are all our items!</p>
+
+ <p>meat rice  10 yuan <p>
+ <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525417491220&di=d25f822c9902dbed52771264110aff33&imgtype=0&src=http%3A%2F%2Fqcloud.dpfile.com%2Fpc%2Fo3e7drH_BA-wYo9C-bxSVKEDyXAJre1QO8116hgA1plTHnprgj5JQnRdSUJp8DymTYGVDmosZWTLal1WbWRW3A.jpg">
+
+<!-- Like And Comment -->
+ <button>Like</button>
+ <h2>Leave your order</h2>
+ <form action="{% url 'waimai:home_page' %}" method="POST">
+ {% csrf_token %}
+ <input type="text" placeholder="Please Enter Your username" name="username"><br><br>
+ <textarea name="comment" placeholder="Please Enter Your order"></textarea><br>
+ <input type="submit" value="Post Me!">
+ </form>
+
+<h2>order</h2>
+ User {{username}} says: {{comment}}
+</body>
+</html>
